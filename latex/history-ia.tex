@@ -1,22 +1,31 @@
 \documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{etex}
+\usepackage{etoolbox}
+\usepackage{keyval}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage[american]{babel}
+\usepackage[babel]{csquotes}
+\usepackage[style=chicago-notes,backend=biber]{biblatex}
+\addbibresource{history-ia.bib}
+\defbibheading{bibliography}{\section{Bibliography}}
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{anyfontsize}
 \usepackage{parskip}
 \usepackage{indentfirst}
-\usepackage{cite}
-\usepackage{textcomp}
 \usepackage{float}
-\usepackage[utf8]{inputenc}
-\usepackage{natbib}
 \usepackage{subcaption}
+
+
 
 \geometry{letterpaper, portrait, margin=1in}
 \doublespace
 \title{Insert Title Here}
 \author{Tynan Purdy}
-\date{\vspace{-5ex}}
+\date{May 2019}
 
 \graphicspath{{../imgs/}}
 
@@ -28,29 +37,30 @@
 	    \pagenumbering{gobble}
 	    \maketitle
 	    \begin{center}
-	    \vspace{4mm}
 	    002129-0004 \\
 	    \vspace{4mm}
-	    International Baccelaureate History Higher Level Internal Assessment \\
-	    \vspace{4mm}
-	    May 2019 \\
+	    IB History HL IA \\
 	    \vspace{4mm}
 	    Words:  \\ % words
 	\end{center}
 	}
 }	
 
+
+
+
+
+
 \newpage
 \tableofcontents
-
+\pagenumbering{arabic}
 \newpage
-
 
 \section{Evaluation of Sources}
 % ~500 words
 % introduction - 2 sources, research question, explanation of sources (couple sentences for all of this)
 % specifics of the sources
-Test \citep{guttmann}
+I'm feeling fancy ooooH \footcite[4]{guttmann}  
 \subsection{Source 1}
 % discuss V and L thru C and O and P
 % OPcVL
@@ -62,8 +72,8 @@ Test \citep{guttmann}
 \section{Investigation}
 
 \newpage
-\bibliography{history-ia}
-\bibliographystyle{chicago}
+\printbibliography
+
 \newpage
 \section{Appendix}
 \listoffigures
