@@ -1,4 +1,5 @@
 \documentclass[12pt,letterpaper]{article}
+
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{etex}
@@ -8,9 +9,8 @@
 \usepackage{url}
 \usepackage[american]{babel}
 \usepackage[babel]{csquotes}
-\usepackage[style=chicago-notes,backend=biber]{biblatex}
-\addbibresource{history-ia.bib}
-\defbibheading{bibliography}{\section{Bibliography}}
+\usepackage[authordate,backend=biber,isbn=false]{biblatex-chicago}
+\usepackage{filecontents}
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{anyfontsize}
@@ -19,19 +19,47 @@
 \usepackage{float}
 \usepackage{subcaption}
 
+\begin{filecontents}{history-ia.bib}
+@article{guttmann,
+issn = {0020-7020},
+journal = {International Journal},
+pages = {554--568},
+volume = {43},
+publisher = {SAGE Publications},
+number = {4},
+year = {1988},
+title = {The Cold War and the Olympics},
+address = {London, England},
+author = {Guttmann, Allen},
+keywords = {History & Archaeology ; International Relations},
+}
 
+@article{miracleonice,
+journal = {The New York Times},
+year = {1980},
+title = {U.S. Defeats Soviet Squad In Olympic Hockey by 4-3},
+author = {Eskenazi, Gerald},
+address = {New York City, NY}
+}
+\end{filecontents}
 
+\addbibresource{history-ia.bib}
+\defbibheading{bibliography}{\section{Bibliography}}
+\bibliography{history-ia}
+\renewbibmacro*{cite:ibid}{\printtext[bibhyperref]{\bibstring[\mkibid]{ibidem}}}
 \geometry{letterpaper, portrait, margin=1in}
 \doublespace
-\title{Insert Title Here}
+\graphicspath{{../imgs/}}
+
+\title{On the Athletic and Political Rivalry of the USA and the USSR}
 \author{Tynan Purdy}
 \date{May 2019}
 
-\graphicspath{{../imgs/}}
-
 \begin{document}
+
 \large
 \parindent=0.5in
+
 {\fontsize{12}{14.4}
 	{\singlespace
 	    \pagenumbering{gobble}
@@ -41,15 +69,10 @@
 	    \vspace{4mm}
 	    IB History HL IA \\
 	    \vspace{4mm}
-	    Words:  \\ % words
+	    Words: 489 \\ % words
 	\end{center}
 	}
 }	
-
-
-
-
-
 
 \newpage
 \tableofcontents
@@ -60,16 +83,32 @@
 % ~500 words
 % introduction - 2 sources, research question, explanation of sources (couple sentences for all of this)
 % specifics of the sources
-I'm feeling fancy ooooH \footcite[4]{guttmann}  
-\subsection{Source 1}
+
+How did the 1980 and 1984 Olympic Games inflame cultural tensions between the United States and the Soviet Union? With all the tensions over events in Afghanistan, the ongoing Cold War, as well as boycotts from both the USSR and the USA on the '80 and '84 Games\footcite[559]{guttmann}, these Olympic Games surely had some effect on the adverse relationship between the two nations. This investigation aims to reveal the degree of importance the 1980 and 1984 Olympic Games had for the American and Soviet people, as well as study the intense rivalry between their Olympic teams and how that rivalry correlated with political rivalry.
+
+\subsection{Source 1: \citetitle{guttmann}}
 % discuss V and L thru C and O and P
 % OPcVL
 
-\subsection{Source 2}
+\citetitle{guttmann} offers a political context for the events significant to the investigation. It summarizes the political events surrounding the Olympic Games and actions of nations involved in the Cold War that pertained to the Games. With knowledge of not just the immediate political context of the Games, such as the boycotts and Russian invasion of Afghanistan, but also the previous abstinence of Russia from the games and the process of them joining the International Olympic Committee\footcite[555-558]{guttmann}, the biases, mindset and preconceptions of the American and Soviet citizens can be better approximated. Author of the article, \citeauthor{guttmann}, is an esteemed professor at Amherst College, with five degrees and a focus on literature and American studies. He teaches ``Sport and Society'' as well as ``The Nazi Olympics'' based on his research and experience in those topics, alongside his American literature courses. The purpose of \citeauthor{guttmann}'s article is to provide a comprehensive narrative of the interactions of Cold War politics and the Olympic Games. \citetitle{guttmann} provides a narrative overview for the investigation and points to several key events for further consideration. 
+
+\subsection{Source 2: \citetitle{miracleonice}}
 % ditto
 % OPcVL
 
+\citetitle{miracleonice} is an article from The New York Times by reporter \citeauthor{miracleonice}. This is a first hand account of the gold medal hockey game between the USA and USSR men's hockey teams. It has the advantage of being a primary document, giving an authentic impression and emotional snapshot of the game from an American spectator viewpoint. The author has the real context of the American people at the time, allowing him to give remarks such as ``Few victories in American Olympic play have provoked reaction comparable to tonight's decision at the red-seated, smallish Olympic Field House''\footcite{miracleonice}. This article provides insight into what got the American's attention in the game, specifically certain alleged uncalled fouls by the Russians as well as a brag that the US team got their winning tactics from the Russian's themselves. The comments in the article reveal the novelties of the US USSR rivalry, contributing to the investigation well. The article is limited by it's format as a written article, which cannot convey nearly as much emotional information as video. However that shortcoming will be made up for as original footage of the game will also be considered in the investigation. 
+
+Words: 480
+
 \section{Investigation}
+
+
+Words: 
+
+\section{Reflection}
+
+
+Words:
 
 \newpage
 \printbibliography
@@ -77,6 +116,5 @@ I'm feeling fancy ooooH \footcite[4]{guttmann}
 \newpage
 \section{Appendix}
 \listoffigures
-
 
 \end{document}
